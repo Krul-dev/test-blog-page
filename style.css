@@ -1,0 +1,159 @@
+/* ===============================
+   Global box model
+   =============================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   Page base
+   =============================== */
+
+body {
+  margin: 0;
+  background-color: #D8D8D8;
+  font-family: system-ui, sans-serif;
+  color: #151515;
+}
+
+/* ===============================
+   Header
+   =============================== */
+
+header {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: #0039A6;
+  color: #FFFFFF;
+}
+
+/* Header title + logo row */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+/* Site title */
+.header-content h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Logo (single, non-conflicting definition) */
+#logo {
+  display: block;
+  height: 48px;
+  width: auto;
+  margin-left: auto;
+}
+
+/* Banner image */
+#banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===============================
+   Navigation
+   =============================== */
+
+nav {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: #494949;
+  color: #FFFFFF;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+}
+
+nav a {
+  display: block;
+  padding: 0.3rem 0;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  background-color: #525252;
+}
+
+/* ===============================
+   Main content
+   =============================== */
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: #E5E5E5;
+}
+
+/* ===============================
+   Profile section
+   =============================== */
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+#profile-picture {
+  height: 9.5rem;
+  width: auto;
+  margin-left: auto;
+}
+
+/* ===============================
+   Typography
+   =============================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #0039A6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Footer
+   =============================== */
+
+footer {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: #494949;
+  color: #FFFFFF;
+  padding: 1rem 2rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
