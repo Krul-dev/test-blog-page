@@ -1,31 +1,70 @@
-/* ===============================
-   Global box model
-   =============================== */
+/* =============================== */
+/* Theme variables                 */
+/* =============================== */
+
+:root {
+  /* Layout */
+  --max-width: 860px;
+  --pad-x: 2rem;
+  --pad-y: 1rem;
+
+  /* Colors */
+  --page-bg: #D8D8D8;
+  --panel-bg: #E5E5E5;
+  --header-bg: #0039A6;
+  --nav-bg: #494949;
+  --nav-hover-bg: #525252;
+
+  --text-main: #151515;
+  --text-inverse: #FFFFFF;
+
+  --link-main: #0039A6;
+  --link-hover: #0058ff;
+}
+
+/* =============================== */
+/* Base                            */
+/* =============================== */
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* ===============================
-   Page base
-   =============================== */
-
 body {
   margin: 0;
-  background-color: #D8D8D8;
+  background-color: var(--page-bg);
   font-family: system-ui, sans-serif;
-  color: #151515;
+  color: var(--text-main);
 }
 
-/* ===============================
-   Header
-   =============================== */
+/* =============================== */
+/* Typography                      */
+/* =============================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--link-main);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* =============================== */
+/* Header                          */
+/* =============================== */
 
 header {
-  max-width: 860px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  background-color: #0039A6;
-  color: #FFFFFF;
+  background-color: var(--header-bg);
+  color: var(--text-inverse);
 }
 
 /* Header title + logo row */
@@ -33,7 +72,7 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: var(--pad-y) var(--pad-x);
 }
 
 /* Site title */
@@ -42,7 +81,7 @@ header {
   font-size: 2rem;
 }
 
-/* Logo (single, non-conflicting definition) */
+/* Logo */
 #logo {
   display: block;
   height: 48px;
@@ -57,15 +96,15 @@ header {
   height: auto;
 }
 
-/* ===============================
-   Navigation
-   =============================== */
+/* =============================== */
+/* Navigation                      */
+/* =============================== */
 
 nav {
-  max-width: 860px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  background-color: #494949;
-  color: #FFFFFF;
+  background-color: var(--nav-bg);
+  color: var(--text-inverse);
 }
 
 nav ul {
@@ -82,31 +121,30 @@ nav li {
 nav a {
   display: block;
   padding: 0.3rem 0;
-  color: #FFFFFF;
-  text-decoration: none;
+  color: var(--text-inverse);
   text-align: center;
   text-transform: uppercase;
 }
 
 nav a:hover {
-  background-color: #525252;
-  text-decoration: none;
+  background-color: var(--nav-hover-bg);
+  color: var(--text-inverse);
 }
 
-/* ===============================
-   Main content
-   =============================== */
+/* =============================== */
+/* Main content                    */
+/* =============================== */
 
 main {
-  max-width: 860px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem 2rem;
-  background-color: #E5E5E5;
+  padding: var(--pad-y) var(--pad-x);
+  background-color: var(--panel-bg);
 }
 
-/* ===============================
-   Profile section
-   =============================== */
+/* =============================== */
+/* Profile section                 */
+/* =============================== */
 
 .profile {
   display: flex;
@@ -122,39 +160,19 @@ main {
   margin-left: auto;
 }
 
-/* ===============================
-   Typography
-   =============================== */
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #0039A6;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===============================
-   Footer
-   =============================== */
+/* =============================== */
+/* Footer                          */
+/* =============================== */
 
 footer {
-  max-width: 860px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  background-color: #494949;
-  color: #FFFFFF;
-  padding: 1rem 2rem;
+  background-color: var(--nav-bg);
+  color: var(--text-inverse);
+  padding: var(--pad-y) var(--pad-x);
 }
 
 footer p {
   margin: 0;
   font-size: 0.9rem;
 }
-
